@@ -15,13 +15,25 @@ $badword= $_GET['censured']
 <body>
     
 <h2>Questo e' il tuo testo:</h2>
-<p><?php echo $text ?></p> 
+<p>
+    <?php echo $text;
+    ?>
+ </p> 
+<p>
+    <?php
+    echo strlen($text);
+     ?>
+</p> 
 
-
+<h2>Questo e' il tuo testo censurato:</h2>
     <?php 
     $censured_letter= str_replace($badword, "**", $text);
-    echo $censured_letter
+    echo $censured_letter;
+   
     ?>
+     <p><?php
+    echo strlen($censured_letter);
+     ?></p> 
    
 </body>
 </html>
